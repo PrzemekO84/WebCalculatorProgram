@@ -16,7 +16,7 @@ h1{
     border: 4px solid black;
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 28%;
     height: 80vh;
     margin: auto;
     padding: 10px;
@@ -64,10 +64,10 @@ h1{
 }
 
 #operators button{
-    width: 90px;
+    width: 70%;
     height: 90px;
     font-size: 3.5em;
-    margin-top: 8px;
+    margin-top: 14%;
     border: none;
     border-radius: 50px;
     background-color: hsl(35, 87%, 51%);
@@ -93,12 +93,11 @@ h1{
 
 #digits button{
     font-size: 3.5em;
-    min-width: 100px;
+    width: 28%; /* Adjust the width percentage */
     height: 100px;
-    margin: 10px;
-    margin-left: 12px;
+    margin: 2%; /* Adjust the margin percentage */
     border: none;
-    border-radius: 50px;
+    border-radius: 45%;
     padding: 8px;
     background-color: hsl(0, 0%, 75%);
     transition: background-color ease 0.5s;
