@@ -38,10 +38,13 @@ h1{
 }
 
 #result{
-    font-size: 5em;
+    font-size: 4.5em;
     margin-left: 10px;
     color: hsl(0, 0%, 90%);
     font-weight: bold;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Show ellipsis for overflowing content */
 }
 
 /* Controls (Operators and Digits) */

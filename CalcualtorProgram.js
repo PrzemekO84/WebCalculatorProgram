@@ -9,6 +9,7 @@ let secondNumberArray = [];
 let operator;
 let firstNumber;
 let secondNumber;
+let equationResult;
 
 //Operators Check
 
@@ -23,6 +24,15 @@ console.log(operatorsArray);
 
 
 function updateDisplay(input){
+
+    if(equationResult === "Error"){
+        firstNumberArray = [];
+        secondNumberArray = [];
+        operator = "";
+        result.textContent = "";
+        equationResult = "";
+    }
+
     if(operatorsArray.includes(input)) {
         if (!operator && firstNumberArray.length > 0){
             operator = input;
@@ -38,7 +48,7 @@ function updateDisplay(input){
                 return;
             }
             firstNumberArray.push(input);
-            result.textContent = firstNumberArray.join('');
+            result.textContent += input;
         } 
         else {
             if(input === "." && secondNumberArray.includes(".")){
@@ -67,7 +77,7 @@ function displayResult(){
     firstNumber = parseFloat(firstNumberArray.join(''));
     secondNumber = parseFloat(secondNumberArray.join(''));
 
-    let equationResult;
+    
 
     switch(operator){
         case "+":
@@ -88,8 +98,8 @@ function displayResult(){
             }    
             break;
     }
-    
-    if(typeof equationResult !== "number" || equationResult == NaN){
+
+    if(typeof equationResult !== "number" || isNaN(equationResult)){
         equationResult = "Error"
     }
 
